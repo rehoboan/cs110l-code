@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CPP_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/week1/part-3-hangman/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/week2/rdiff/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/week1/part-3-hangman/target" />
+      <excludeFolder url="file://$MODULE_DIR$/week2/rdiff/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

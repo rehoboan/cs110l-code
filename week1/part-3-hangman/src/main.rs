@@ -37,4 +37,39 @@ fn main() {
     // println!("random word: {}", secret_word);
 
     // Your code here! :)
-}
+    let guess_len = secret_word_chars.len();
+    let mut guessed: Vec<char> = vec!['-';guess_len];
+    let mut you_guessed: Vec<char> = Vec::new();
+    let mut sum_guess = NUM_INCORRECT_GUESSES;
+
+    println!("Welcome to Hangman!");
+
+
+    while sum_guess > 0 {
+        let s:String = guessed.iter().collect();
+        println!("The word so far is {}",s);
+        let you_guessed_str:String = you_guessed.iter().collect();
+        println!("You have guessed the following letters:{}",you_guessed_str);
+        println!("You have {} guesses left",NUM_INCORRECT_GUESSES);
+        println!("Please guess a letter:");
+        io::stdout()
+            .flush()
+            .expect("Error flushing stdout");
+        let mut guess = String::new();
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Error reading line");
+        let guess_vec:Vec<char> = guess.chars().collect();
+        if secret_word_chars.contains(&guess_vec[0]){
+            let index = guessed.iter().position(|&r|r==guess_vec[0]).unwrap();
+            println!("{}",index);
+        }
+        else{
+            sum_guess -= 1;
+        }
+    }
+
+    }
+
+
+
